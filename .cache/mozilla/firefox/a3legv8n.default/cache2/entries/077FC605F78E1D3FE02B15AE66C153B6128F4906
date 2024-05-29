@@ -1,0 +1,554 @@
+{
+	"private": true,
+	"name": "volar",
+	"version": "2.0.17",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vuejs/language-tools.git",
+		"directory": "packages/vscode"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"sponsor": {
+		"url": "https://github.com/sponsors/johnsoncodehk"
+	},
+	"icon": "images/icon.png",
+	"displayName": "Vue - Official",
+	"description": "Language Support for Vue",
+	"author": "johnsoncodehk",
+	"publisher": "Vue",
+	"engines": {
+		"vscode": "^1.88.0"
+	},
+	"activationEvents": [
+		"onLanguage:vue",
+		"onLanguage:markdown",
+		"onLanguage:html"
+	],
+	"main": "./client.js",
+	"browser": "./web.js",
+	"capabilities": {
+		"virtualWorkspaces": {
+			"supported": "limited",
+			"description": "Install https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-web to have IntelliSense for .vue files in Web IDE."
+		}
+	},
+	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": "tsconfig.json",
+				"url": "./dist/schemas/vue-tsconfig.schema.json"
+			},
+			{
+				"fileMatch": "tsconfig-*.json",
+				"url": "./dist/schemas/vue-tsconfig.schema.json"
+			},
+			{
+				"fileMatch": "tsconfig.*.json",
+				"url": "./dist/schemas/vue-tsconfig.schema.json"
+			},
+			{
+				"fileMatch": "jsconfig.json",
+				"url": "./dist/schemas/vue-tsconfig.schema.json"
+			},
+			{
+				"fileMatch": "jsconfig-*.json",
+				"url": "./dist/schemas/vue-tsconfig.schema.json"
+			},
+			{
+				"fileMatch": "jsconfig.*.json",
+				"url": "./dist/schemas/vue-tsconfig.schema.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "vue",
+				"extensions": [
+					".vue"
+				],
+				"configuration": "./languages/vue-language-configuration.json"
+			},
+			{
+				"id": "markdown",
+				"configuration": "./languages/markdown-language-configuration.json"
+			},
+			{
+				"id": "html",
+				"configuration": "./languages/sfc-template-language-configuration.json"
+			},
+			{
+				"id": "jade",
+				"configuration": "./languages/sfc-template-language-configuration.json"
+			},
+			{
+				"id": "plaintext",
+				"configuration": "./languages/sfc-template-language-configuration.json"
+			}
+		],
+		"typescriptServerPlugins": [
+			{
+				"name": "typescript-vue-plugin-bundle",
+				"enableForWorkspaceTypeScriptVersions": true,
+				"configNamespace": "typescript"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vue",
+				"scopeName": "source.vue",
+				"path": "./syntaxes/vue.tmLanguage.json",
+				"embeddedLanguages": {
+					"source.vue": "vue",
+					"text": "plaintext",
+					"text.html.derivative": "html",
+					"text.html.markdown": "markdown",
+					"text.pug": "jade",
+					"source.css": "css",
+					"source.css.scss": "scss",
+					"source.css.less": "less",
+					"source.sass": "sass",
+					"source.stylus": "stylus",
+					"source.postcss": "postcss",
+					"source.js": "javascript",
+					"source.ts": "typescript",
+					"source.js.jsx": "javascriptreact",
+					"source.tsx": "typescriptreact",
+					"meta.tag.js": "jsx-tags",
+					"meta.tag.tsx": "jsx-tags",
+					"meta.tag.without-attributes.js": "jsx-tags",
+					"meta.tag.without-attributes.tsx": "jsx-tags",
+					"source.json": "json",
+					"source.json.comments": "jsonc",
+					"source.json5": "json5",
+					"source.yaml": "yaml",
+					"source.toml": "toml",
+					"source.graphql": "graphql"
+				},
+				"unbalancedBracketScopes": [
+					"keyword.operator.relational",
+					"storage.type.function.arrow",
+					"keyword.operator.bitwise.shift",
+					"meta.brace.angle",
+					"punctuation.definition.tag"
+				]
+			},
+			{
+				"scopeName": "markdown.vue.codeblock",
+				"path": "./syntaxes/markdown-vue.json",
+				"injectTo": [
+					"text.html.markdown"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.vue": "vue",
+					"source.vue": "vue",
+					"text": "plaintext",
+					"text.html.derivative": "html",
+					"text.html.markdown": "markdown",
+					"text.pug": "jade",
+					"source.css": "css",
+					"source.css.scss": "scss",
+					"source.css.less": "less",
+					"source.sass": "sass",
+					"source.stylus": "stylus",
+					"source.postcss": "postcss",
+					"source.js": "javascript",
+					"source.ts": "typescript",
+					"source.js.jsx": "javascriptreact",
+					"source.tsx": "typescriptreact",
+					"meta.tag.js": "jsx-tags",
+					"meta.tag.tsx": "jsx-tags",
+					"meta.tag.without-attributes.js": "jsx-tags",
+					"meta.tag.without-attributes.tsx": "jsx-tags",
+					"source.json": "json",
+					"source.json.comments": "jsonc",
+					"source.json5": "json5",
+					"source.yaml": "yaml",
+					"source.toml": "toml",
+					"source.graphql": "graphql"
+				}
+			},
+			{
+				"scopeName": "vue.directives",
+				"path": "./syntaxes/vue-directives.json",
+				"injectTo": [
+					"source.vue",
+					"text.html.markdown",
+					"text.html.derivative",
+					"text.pug"
+				]
+			},
+			{
+				"scopeName": "vue.interpolations",
+				"path": "./syntaxes/vue-interpolations.json",
+				"injectTo": [
+					"source.vue",
+					"text.html.markdown",
+					"text.html.derivative",
+					"text.pug"
+				]
+			},
+			{
+				"scopeName": "vue.sfc.style.variable.injection",
+				"path": "./syntaxes/vue-sfc-style-variable-injection.json",
+				"injectTo": [
+					"source.vue"
+				]
+			}
+		],
+		"breakpoints": [
+			{
+				"language": "vue"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Vue",
+			"properties": {
+				"vue.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				},
+				"vue.server.hybridMode": {
+					"type": "boolean",
+					"default": "auto",
+					"enum": [
+						"auto",
+						"typeScriptPluginOnly",
+						true,
+						false
+					],
+					"enumDescriptions": [
+						"Automatically detect and enable TypeScript Plugin/Hybrid Mode in a safe environment.",
+						"Only enable Vue TypeScript Plugin but disable Hybrid Mode.",
+						"Enable TypeScript Plugin/Hybrid Mode.",
+						"Disable TypeScript Plugin/Hybrid Mode."
+					],
+					"description": "Vue language server only handles CSS and HTML language support, and tsserver takes over TS language support via TS plugin."
+				},
+				"vue.server.includeLanguages": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"vue"
+					]
+				},
+				"vue.server.maxFileSize": {
+					"type": "number",
+					"default": 20971520,
+					"description": "Maximum file size for Vue Language Server to load. (default: 20MB)"
+				},
+				"vue.server.maxOldSpaceSize": {
+					"type": [
+						"number",
+						"null"
+					],
+					"default": null,
+					"description": "Set --max-old-space-size option on server process. If you have problem on frequently \"Request textDocument/** failed.\" error, try setting higher memory(MB) on it."
+				},
+				"vue.doctor.status": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show known problems in status bar."
+				},
+				"vue.splitEditors.icon": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show split editor icon in title area of editor."
+				},
+				"vue.splitEditors.layout.left": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"script",
+						"scriptSetup",
+						"styles"
+					]
+				},
+				"vue.splitEditors.layout.right": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"template",
+						"customBlocks"
+					]
+				},
+				"vue.updateImportsOnFileMove.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enabled update imports on file move."
+				},
+				"vue.codeActions.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enabled code actions."
+				},
+				"vue.codeActions.askNewComponentName": {
+					"type": "boolean",
+					"default": true,
+					"description": "Ask for new component name when extract component."
+				},
+				"vue.codeLens.enabled": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enabled code lens."
+				},
+				"vue.complete.casing.tags": {
+					"type": "string",
+					"enum": [
+						"autoKebab",
+						"autoPascal",
+						"kebab",
+						"pascal"
+					],
+					"enumDescriptions": [
+						"Auto Detect from Content (Fallback to <kebab-case> if detect failed)",
+						"Auto Detect from Content  (Fallback to <PascalCase> if detect failed)",
+						"<kebab-case>",
+						"<PascalCase>"
+					],
+					"default": "autoPascal",
+					"description": "Preferred tag name case."
+				},
+				"vue.complete.casing.props": {
+					"type": "string",
+					"enum": [
+						"autoKebab",
+						"autoCamel",
+						"kebab",
+						"camel"
+					],
+					"enumDescriptions": [
+						"Auto Detect from Content (Fallback to :kebab-case=\"...\" if detect failed)",
+						"Auto Detect from Content (Fallback to :camelCase=\"...\" if detect failed)",
+						":kebab-case=\"...\"",
+						":camelCase=\"...\""
+					],
+					"default": "autoKebab",
+					"description": "Preferred attr name case."
+				},
+				"vue.autoInsert.parentheses": {
+					"type": "boolean",
+					"default": true,
+					"description": "Auto-wrap `()` to As Expression in interpolations for fix issue #520."
+				},
+				"vue.autoInsert.dotValue": {
+					"type": "boolean",
+					"default": false,
+					"description": "Auto-complete Ref value with `.value`."
+				},
+				"vue.autoInsert.bracketSpacing": {
+					"type": "boolean",
+					"default": true,
+					"description": "Auto add space between double curly brackets: {{|}} -> {{ | }}"
+				},
+				"vue.inlayHints.missingProps": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show inlay hints for missing required props."
+				},
+				"vue.inlayHints.inlineHandlerLeading": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show inlay hints for event argument in inline handlers."
+				},
+				"vue.inlayHints.optionsWrapper": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show inlay hints for component options wrapper for type support."
+				},
+				"vue.inlayHints.vBindShorthand": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show inlay hints for v-bind shorthand."
+				},
+				"vue.format.template.initialIndent": {
+					"type": "boolean",
+					"default": true
+				},
+				"vue.format.style.initialIndent": {
+					"type": "boolean",
+					"default": false
+				},
+				"vue.format.script.initialIndent": {
+					"type": "boolean",
+					"default": false
+				},
+				"vue.format.wrapAttributes": {
+					"type": "string",
+					"default": "auto",
+					"enum": [
+						"auto",
+						"force",
+						"force-aligned",
+						"force-expand-multiline",
+						"aligned-multiple",
+						"preserve",
+						"preserve-aligned"
+					]
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "vue.action.restartServer",
+				"title": "Restart Vue and TS servers",
+				"category": "Vue"
+			},
+			{
+				"command": "vue.action.doctor",
+				"title": "Doctor",
+				"category": "Vue"
+			},
+			{
+				"command": "vue.action.writeVirtualFiles",
+				"title": "Write Virtual Files",
+				"category": "Vue (Debug)"
+			},
+			{
+				"command": "vue.action.splitEditors",
+				"title": "Split <script>, <template>, <style> Editors",
+				"category": "Vue",
+				"icon": "images/split-editors.png"
+			},
+			{
+				"command": "vue.findAllFileReferences",
+				"title": "Find File References via Vue Language Server",
+				"category": "Vue"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "typescript.goToSourceDefinition",
+					"when": "vueHybridMode && tsSupportsSourceDefinition && resourceLangId == vue",
+					"group": "navigation@9"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "typescript.findAllFileReferences",
+					"when": "vueHybridMode && tsSupportsFileReferences && resourceLangId == vue",
+					"group": "4_search"
+				},
+				{
+					"command": "vue.findAllFileReferences",
+					"when": "!vueHybridMode && resourceLangId == vue",
+					"group": "4_search"
+				}
+			],
+			"editor/title/context": [
+				{
+					"command": "typescript.findAllFileReferences",
+					"when": "vueHybridMode && tsSupportsFileReferences && resourceLangId == vue"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "typescript.reloadProjects",
+					"when": "vueHybridMode && editorLangId == vue && typescript.isManagedFile"
+				},
+				{
+					"command": "typescript.goToProjectConfig",
+					"when": "vueHybridMode && editorLangId == vue"
+				},
+				{
+					"command": "vue.action.doctor",
+					"when": "vue.activated"
+				},
+				{
+					"command": "vue.action.writeVirtualFiles",
+					"when": "vue.activated"
+				},
+				{
+					"command": "vue.action.splitEditors",
+					"when": "editorLangId == vue"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "vue.action.splitEditors",
+					"when": "resourceLangId == vue && config.vue.splitEditors.icon",
+					"group": "navigation"
+				}
+			]
+		},
+		"problemMatchers": [
+			{
+				"name": "vite",
+				"label": "Vite problems",
+				"pattern": {
+					"regexp": ""
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "restarting server...$",
+					"endsPattern": "\\s*ready in|server restarted."
+				}
+			}
+		]
+	},
+	"scripts": {
+		"prebuild": "cd ../.. && npm run build",
+		"build": "node scripts/build",
+		"build:minify": "npm run build -- --minify",
+		"watch": "npm run build -- --watch",
+		"pack": "npm run build:minify && vsce package",
+		"pack:next": "npm run build && vsce package",
+		"release": "npm run build:minify && vsce publish",
+		"release:next": "npm run build && vsce publish --pre-release",
+		"size": "npm run build:minify -- --metafile && esbuild-visualizer --metadata ./meta.json && open ./stats.html"
+	},
+	"devDependencies": {
+		"@types/semver": "^7.5.3",
+		"@types/vscode": "^1.82.0",
+		"@volar/vscode": "~2.2.2",
+		"@vue/language-core": "2.0.17",
+		"@vue/language-server": "2.0.17",
+		"@vue/typescript-plugin": "2.0.17",
+		"esbuild": "latest",
+		"esbuild-plugin-copy": "latest",
+		"esbuild-visualizer": "latest",
+		"semver": "^7.5.4",
+		"vsce": "latest"
+	}
+}
++ZåGüÉ      fWR¡fWR¡Fñ¦ëfh„é   †    O^partitionKey=%28https%2Ccodesandbox.io%29,a,~FETCH,:https://openvsxorg.blob.core.windows.net/resources/Vue/volar/2.0.17/package.json necko:classified 1 strongly-framed 1 security-info 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bG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxMS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxMi5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxMy5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxNC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxNS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxNi5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxNy5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxOC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoxOS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyMC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyMS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyMi5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyMy5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyNC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyNS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyNi5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyNy5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyOC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnoyOS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozMC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozMS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozMi5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozMy5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozNC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozNS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozNi5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozNy5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozOC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLnozOS5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghwqLno0MC5i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ZXSCGyouejMuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIbKi56NC5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghsqLno1LmJsb2Iuc3RvcmFnZS5henVyZS5uZXSCGyouejYuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIbKi56Ny5ibG9iLnN0b3JhZ2UuYXp1cmUubmV0ghsqLno4LmJsb2Iuc3RvcmFnZS5henVyZS5uZXSCGyouejkuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTAuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTEuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTIuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTMuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTQuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTUuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTYuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTcuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTguYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MTkuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjAuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjEuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjIuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjMuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjQuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjUuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjYuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjcuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjguYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MjkuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzAuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzEuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzIuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzMuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzQuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzUuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzYuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzcuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzguYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56MzkuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDAuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDEuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDIuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDMuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDQuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDUuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDYuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDcuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDguYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NDkuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldIIcKi56NTAuYmxvYi5zdG9yYWdlLmF6dXJlLm5ldDAMBgNVHRMBAf8EAjAAMGoGA1UdHwRjMGEwX6BdoFuGWWh0dHA6Ly93d3cubWljcm9zb2Z0LmNvbS9wa2lvcHMvY3JsL01pY3Jvc29mdCUyMEF6dXJlJTIwUlNBJTIwVExTJTIwSXNzdWluZyUyMENBJTIwMDMuY3JsMGYGA1UdIARfMF0wUQYMKwYBBAGCN0yDfQEBMEEwPwYIKwYBBQUHAgEWM2h0dHA6Ly93d3cubWljcm9zb2Z0LmNvbS9wa2lvcHMvRG9jcy9SZXBvc2l0b3J5Lmh0bTAIBgZngQwBAgIwHwYDVR0jBBgwFoAU/glxQFUFEETYpIF1uJ4a6UoGiMgwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMA0GCSqGSIb3DQEBDAUAA4ICAQAMmcgiNWghQEAiUhQK0Kte6M/xif0Z6oY9A7WrJt0YkCPO86oHDnq4Qqe0nivKZ3d3lPA16aQt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 request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: max-age=2592000, public
+Content-Length: 13991
+Content-Type: application/json
+Last-Modified: Fri, 10 May 2024 08:59:25 GMT
+ETag: 0x8DC70CF7E3F0431
+Server: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
+x-ms-request-id: 7a292bed-301e-0074-398f-a47001000000
+x-ms-version: 2009-09-19
+x-ms-lease-status: unlocked
+x-ms-blob-type: BlockBlob
+Access-Control-Allow-Origin: *
+Date: Sun, 12 May 2024 17:10:01 GMT
+ original-response-headers Cache-Control: max-age=2592000, public
+Content-Length: 13991
+Content-Type: application/json
+Last-Modified: Fri, 10 May 2024 08:59:25 GMT
+ETag: 0x8DC70CF7E3F0431
+Server: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
+x-ms-request-id: 7a292bed-301e-0074-398f-a47001000000
+x-ms-version: 2009-09-19
+x-ms-lease-status: unlocked
+x-ms-blob-type: BlockBlob
+Access-Control-Allow-Origin: *
+Date: Sun, 12 May 2024 17:10:01 GMT
+ ctid 1 net-response-time-onstart 857 net-response-time-onstop 858   6§
