@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css" />
     <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css" />
   </head>
-  <!-- Cached: Wed, 29 May 2024 17:10:58 GMT -->
+  <!-- Cached: Sat, 08 Jun 2024 15:51:19 GMT -->
   <body class="activity-stream">
     <div id="header-asrouter-container" role="presentation"></div>
     <div id="root">
@@ -37,7 +37,7 @@ window.__STARTUP_STATE__ = {
 				"isDefault": false,
 				"url": "https://www.coinimp.com/dashboard",
 				"baseDomain": "coinimp.com",
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fwww.coinimp.com%2Fdashboard&revision=3681",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fwww.coinimp.com%2Fdashboard&revision=5494",
 				"hostname": "coinimp",
 				"searchTopSite": false,
 				"isPinned": true,
@@ -62,7 +62,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconSize": 16,
 				"hostname": "docs.google",
 				"label": "docs.google",
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1qDmI8ZvKsBinxVM-rpyBXpH1lJEurf-cwNhIZrWd1eU%2Fedit%23gid%3D0&revision=4106",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1qDmI8ZvKsBinxVM-rpyBXpH1lJEurf-cwNhIZrWd1eU%2Fedit%23gid%3D0&revision=4431",
 				"searchTopSite": false,
 				"isPinned": true,
 				"pinIndex": 1,
@@ -84,7 +84,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 1450,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 32,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fstalwart-figolla-bac699.netlify.app%2F%23iframe0&revision=6576",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fstalwart-figolla-bac699.netlify.app%2F%23iframe0&revision=4626",
 				"hostname": "stalwart-figolla-bac699",
 				"typedBonus": true
 			},
@@ -104,7 +104,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 1450,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 32,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fvisionary-taiyaki-327f98.netlify.app%2F%23iframe0&revision=2115",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fvisionary-taiyaki-327f98.netlify.app%2F%23iframe0&revision=2177",
 				"hostname": "visionary-taiyaki-327f98",
 				"typedBonus": true
 			},
@@ -143,7 +143,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 664,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 16,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%23inbox&revision=3999",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%23inbox&revision=7340",
 				"hostname": "mail.google",
 				"typedBonus": true
 			},
@@ -163,7 +163,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 1450,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 32,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Flighthearted-cucurucho-dfe839.netlify.app%2F%23iframe0&revision=1256",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Flighthearted-cucurucho-dfe839.netlify.app%2F%23iframe0&revision=546",
 				"hostname": "lighthearted-cucurucho-dfe839",
 				"typedBonus": true
 			},
@@ -237,7 +237,7 @@ window.__STARTUP_STATE__ = {
 				"isDefault": false,
 				"url": "https://www.coinimp.com/dashboard",
 				"baseDomain": "coinimp.com",
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fwww.coinimp.com%2Fdashboard&revision=3681",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fwww.coinimp.com%2Fdashboard&revision=5494",
 				"hostname": "coinimp",
 				"searchTopSite": false,
 				"isPinned": true,
@@ -262,7 +262,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconSize": 16,
 				"hostname": "docs.google",
 				"label": "docs.google",
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1qDmI8ZvKsBinxVM-rpyBXpH1lJEurf-cwNhIZrWd1eU%2Fedit%23gid%3D0&revision=4106",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1qDmI8ZvKsBinxVM-rpyBXpH1lJEurf-cwNhIZrWd1eU%2Fedit%23gid%3D0&revision=4431",
 				"searchTopSite": false,
 				"isPinned": true,
 				"pinIndex": 1,
@@ -284,7 +284,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 1450,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 32,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fstalwart-figolla-bac699.netlify.app%2F%23iframe0&revision=6576",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fstalwart-figolla-bac699.netlify.app%2F%23iframe0&revision=4626",
 				"hostname": "stalwart-figolla-bac699",
 				"typedBonus": true
 			},
@@ -304,7 +304,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 1450,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 32,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fvisionary-taiyaki-327f98.netlify.app%2F%23iframe0&revision=2115",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fvisionary-taiyaki-327f98.netlify.app%2F%23iframe0&revision=2177",
 				"hostname": "visionary-taiyaki-327f98",
 				"typedBonus": true
 			},
@@ -343,7 +343,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 664,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 16,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%23inbox&revision=3999",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%23inbox&revision=7340",
 				"hostname": "mail.google",
 				"typedBonus": true
 			},
@@ -363,7 +363,7 @@ window.__STARTUP_STATE__ = {
 				"smallFaviconLength": 1450,
 				"smallFaviconRef": "",
 				"smallFaviconSize": 32,
-				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Flighthearted-cucurucho-dfe839.netlify.app%2F%23iframe0&revision=1256",
+				"screenshot": "moz-page-thumb://thumbnails/?url=https%3A%2F%2Flighthearted-cucurucho-dfe839.netlify.app%2F%23iframe0&revision=546",
 				"hostname": "lighthearted-cucurucho-dfe839",
 				"typedBonus": true
 			},
@@ -852,7 +852,7 @@ window.__STARTUP_STATE__ = {
 		},
 		"spocs": {
 			"spocs_endpoint": "https://spocs.getpocket.com/spocs",
-			"lastUpdated": 1717002643906,
+			"lastUpdated": 1717861874000,
 			"data": {
 				"settings": {
 					"feature_flags": {
@@ -971,4 +971,4 @@ window.__STARTUP_STATE__ = {
 	}
 };
 
-¢+ï           fWa¢Fð ÿÿÿÿ       :about:home alt-data 1;39034,script version 20240320063010   ”
+xÃð«}A           fd}÷Fùnÿÿÿÿ       :about:home alt-data 1;39034,script version 20240320063010   ’
